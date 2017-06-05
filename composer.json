@@ -1,5 +1,10 @@
 {
     "require": {
         "brightnucleus/injector": "^0.4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fe\\DemoBNInjector\\": "src"
+        }
     }
 }

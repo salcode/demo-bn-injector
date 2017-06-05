@@ -30,4 +30,5 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 
 $configFile = __DIR__ . '/config/defaults.php';
 $config     = ConfigFactory::createSubConfig($configFile, 'FeDemoInjector\Cube');
-// $cube = new Cube( $config );
+$cube       = new Cube( $config );
+$volume     = $cube->volume(); // $volume gets a value of 6000 based on config values 10, 20, 30.
