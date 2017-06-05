@@ -16,6 +16,8 @@ declare( strict_types = 1 );
 
 namespace Fe\DemoBNInjector;
 
+use BrightNucleus\Config\ConfigFactory;
+
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
@@ -25,3 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
+
+$configFile = __DIR__ . '/config/defaults.php';
+$config     = ConfigFactory::createSubConfig($configFile, 'FeDemoInjector\Cube');
+// $cube = new Cube( $config );
