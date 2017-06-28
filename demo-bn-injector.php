@@ -32,3 +32,6 @@ $configFile = __DIR__ . '/config/defaults.php';
 $config     = ConfigFactory::createSubConfig($configFile, 'FeDemoInjector\Cube');
 $cube       = new Cube( $config );
 $volume     = $cube->volume(); // $volume gets a value of 6000 based on config values 10, 20, 30.
+
+// Dump the result into the Error Log.
+error_log('$volume=' . print_r($volume, true));
